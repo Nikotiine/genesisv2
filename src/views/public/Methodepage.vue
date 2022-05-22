@@ -1,5 +1,7 @@
 <template>
-  <div>toto</div>
+  <section class="hero is-fullheight">
+    <h1 class="has-font-gabriola">Meta-Homeopathie : La methode</h1>
+  </section>
 </template>
 
 <script>

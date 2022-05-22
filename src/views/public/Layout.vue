@@ -3,14 +3,17 @@
   <div class="public">
     <router-view />
   </div>
+  <genesis-footer />
 </template>
 
 <script>
+import GenesisFooter from "@/components/inAllComponents/Footer.vue";
 import NavbarPublic from "@/components/public/NavbarPublic.vue";
 export default {
   name: "LayoutPublic",
   components: {
     NavbarPublic,
+    GenesisFooter,
   },
 };
 </script>

@@ -42,6 +42,12 @@ nav {
 .has-text-secondary {
   color: $secondary;
 }
+.is-valid-input {
+  border: 2px groove #68e6f6ab;
+}
+.is-invalid-input {
+  border: 2px groove #f66868ab;
+}
 //------------------------------------------------------------public views-------------------------------------------------
 //***************************************Home***************Home***********************home************************
 .down-arrow {
@@ -141,4 +147,15 @@ div.about:nth-child(4) {
 }
 div.about:nth-child(5) {
   grid-area: card3;
+}
+.grid-info {
+  display: grid;
+  justify-items: center;
+  margin-top: 5rem;
+  padding: 3rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "info map"
+    "info map";
 }

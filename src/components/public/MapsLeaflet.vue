@@ -6,7 +6,7 @@
 
       <div v-for="marker in markers" :key="marker.name">
         <l-marker v-if="marker.check" :lat-lng="marker.geoloc">
-          <l-icon :icon-url="marker.icon" :icon-size="marker.iconSize" />
+          <!-- <l-icon :icon-url="marker.icon" :icon-size="marker.iconSize" /> -->
           <l-popup
             >{{ marker.name }}
             <p>{{ marker.adresse }}</p>
@@ -22,7 +22,7 @@ import { latLng } from "leaflet";
 
 import {
   LMap,
-  LIcon,
+  // LIcon,
   LTileLayer,
   LMarker,
   LControlLayers,
@@ -36,7 +36,7 @@ import {
 export default {
   components: {
     LMap,
-    LIcon,
+    // LIcon,
     LTileLayer,
     LMarker,
     LControlLayers,

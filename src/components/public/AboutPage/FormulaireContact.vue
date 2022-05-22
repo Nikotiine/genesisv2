@@ -59,7 +59,11 @@
             type="email"
             placeholder="Indiquez votre Email"
             v-model="email"
-            :class="{ isValidField: validEmail }"
+            :class="{
+              'is-valid-input': validEmail,
+              'is-invalid-input': notValidEmail,
+            }"
+            @blur="testValidEmail"
           />
           <span
             class="icon is-small is-left"
@@ -143,6 +147,7 @@
             class="button is-primary"
             :class="{ 'is-loading': waitForResult }"
             @click="send"
+            :disabled="!fieldIsValid"
           >
             Valider
           </button>
@@ -175,12 +180,23 @@ export default {
       succes: false,
       erreur: false,
       waitForResult: false,
+      notValidEmail: false,
+      validEmail: false,
       ToastSuccesMessage: "Formulaire de contact correctement envoyé",
       ToastErreurMessage:
         "Formulaire de contact non envoyé , merci de recommencer",
     };
   },
   methods: {
+    testValidEmail: function () {
+      if (!this.testEmail) {
+        this.notValidEmail = true;
+        this.validEmail = false;
+      } else {
+        this.validEmail = true;
+        this.notValidEmail = false;
+      }
+    },
     send: function () {
       this.waitForResult = true;
       const noInterceptorAxios = axios.create();
@@ -207,7 +223,25 @@ export default {
         });
     },
   },
+  computed: {
+    testEmail() {
+      const re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(this.email);
+    },
 
+    fieldIsValid: function () {
+      if (
+        !this.lastName ||
+        !this.firstName ||
+        !this.testEmail ||
+        !this.cgu ||
+        !this.sujet
+      ) {
+        return false;
+      } else return true;
+    },
+  },
   mounted() {
     setTimeout(() => {
       document.getElementById("title").scrollIntoView({ behavior: "smooth" });
