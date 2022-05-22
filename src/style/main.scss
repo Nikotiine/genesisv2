@@ -1,0 +1,144 @@
+@import "./theme.scss";
+@import "../../node_modules/bulma/bulma.sass";
+@import "../../node_modules/leaflet/dist/leaflet.css";
+//---------------app--------------------
+#app {
+  background: rgb(255, 255, 255) 100%;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  min-height: 100vh;
+}
+nav {
+  padding: 10px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: $primary;
+    }
+  }
+}
+.box-shadow {
+  box-shadow: 2px 2px 16px 0 $primary;
+}
+.has-font-gabriola {
+  font-family: "gabriola";
+  font-size: 4rem;
+  color: #363636;
+  font-weight: 600;
+  line-height: 1.125;
+}
+.has-font-gabriola-sub {
+  font-family: "gabriola";
+  font-size: 2.5rem;
+  color: #363636;
+  font-weight: 600;
+  line-height: 1.125;
+}
+.has-text-secondary {
+  color: $secondary;
+}
+//------------------------------------------------------------public views-------------------------------------------------
+//***************************************Home***************Home***********************home************************
+.down-arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+}
+.home-meta {
+  height: 100%;
+  padding: 1rem 3rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "elG elG hd hd"
+    "elG elG elD elD"
+    "btn btn btn btn"
+    "down down down down";
+}
+.home-labo {
+  height: 100%;
+  padding: 1rem 3rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "hd hd elD elD"
+    "elG elG elD elD"
+    "btn btn btn btn"
+    "down down down down";
+}
+.home-about {
+  height: 100%;
+  padding: 1rem 3rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "btn1 btn1 btn2 btn2"
+    "texte texte texte texte"
+    "btn3 btn3 btn4 btn4 ";
+}
+
+//***************************************Labo & formations***************Labo & formations*********************Labo & formations********************
+.grid-card {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "title title title"
+    "card1 card2 card3"
+    "card1 card2 card3";
+}
+div.grid-card-child:nth-child(1) {
+  grid-area: title;
+}
+div.grid-card-child:nth-child(2) {
+  grid-area: card1;
+}
+div.grid-card-child:nth-child(3) {
+  grid-area: card2;
+}
+div.grid-card-child:nth-child(4) {
+  grid-area: card3;
+}
+.selectedCard {
+  min-width: 30rem;
+}
+//***************************************Qui somme nous ***************Qui somme nous *********************Qui somme nous ********************
+.grid-about {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "title title title"
+    "team team team "
+    "card1 card2 card3"
+    "card1 card2 card3";
+}
+div.about:nth-child(1) {
+  grid-area: title;
+}
+div.about:nth-child(2) {
+  grid-area: team;
+}
+div.about:nth-child(3) {
+  grid-area: card1;
+}
+div.about:nth-child(4) {
+  grid-area: card2;
+}
+div.about:nth-child(5) {
+  grid-area: card3;
+}

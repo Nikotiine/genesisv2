@@ -1,0 +1,11 @@
+$navbar-background-color: white;
+$navbar-height: 3.25rem;
+$navbar-fixed-z: 900;
+$modal-content-width: 50vw;
+$primary: rgba(107, 166, 241, 1);
+$secondary: rgba(20, 64, 159, 0.734);
+@font-face {
+  font-family: "gabriola";
+  src: url("@/assets/font/gabriola.ttf");
+}
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
