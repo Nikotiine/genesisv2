@@ -1,24 +1,24 @@
 <template>
   <section class="hero is-fullheight" id="homeabout">
     <div class="home-about">
-      <div class="about">
+      <div class="home-end">
         <button-anime :btnName="btn1" :width="320" @click="openCloseMaps" />
       </div>
-      <div class="about">
+      <div class="home-end">
         <figure class="image">
           <button-anime :btnName="btn2" :width="320" />
         </figure>
       </div>
-      <div class="about">
+      <div class="home-end">
         <p class="has-text-secondary">
           c'est la page d'acceuil de Genesis , le liens du dessous t envoie sur
           la methode ainsi je vous explique la methode , suivez le guide ...
         </p>
       </div>
-      <div class="about">
+      <div class="home-end">
         <button-anime :btnName="btn3" :width="320" />
       </div>
-      <div class="about">
+      <div class="home-end">
         <button-anime :btnName="btn4" :width="320" />
       </div>
     </div>
@@ -121,27 +121,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div.about:nth-child(1) {
+div.home-end:nth-child(1) {
   grid-area: btn1;
   padding: 2rem;
 }
-div.about:nth-child(2) {
+div.home-end:nth-child(2) {
   grid-area: btn2;
   padding: 2rem;
 }
-div.about:nth-child(3) {
+div.home-end:nth-child(3) {
   grid-area: texte;
   max-width: 50%;
   margin: auto;
   padding: 2rem;
   font-size: 1.5rem;
 }
-div.about:nth-child(4) {
+div.home-end:nth-child(4) {
   grid-area: btn3;
   padding: 2rem;
 }
-div.about:nth-child(5) {
+div.home-end:nth-child(5) {
   grid-area: btn4;
   padding: 2rem;
+}
+@media screen and (max-width: 880px) {
+  div.home-end {
+    padding: 0.2rem 0.3rem !important;
+    margin: 0 !important;
+  }
+  div.home-end:nth-child(3) {
+    max-width: none;
+  }
 }
 </style>

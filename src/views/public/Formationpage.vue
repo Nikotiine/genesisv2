@@ -161,4 +161,12 @@ export default {
   width: 55px;
   left: auto;
 }
+@media screen and (max-width: 1100px) {
+  div.grid-card-child:nth-child(3) {
+    grid-area: card3;
+  }
+  div.grid-card-child:nth-child(4) {
+    grid-area: card2;
+  }
+}
 </style>

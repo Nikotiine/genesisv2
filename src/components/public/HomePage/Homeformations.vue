@@ -78,4 +78,16 @@ div.meta:nth-child(4) {
 div.meta:nth-child(5) {
   grid-area: down;
 }
+@media screen and (max-width: 880px) {
+  div.meta {
+    padding: 0.2rem 0.3rem !important;
+    margin: 0 !important;
+  }
+  div.meta:nth-child(1) {
+    grid-area: elG;
+  }
+  div.meta:nth-child(2) {
+    grid-area: hd;
+  }
+}
 </style>

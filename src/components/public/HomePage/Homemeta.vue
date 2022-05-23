@@ -80,16 +80,11 @@ div.meta:nth-child(4) {
 div.meta:nth-child(5) {
   grid-area: down;
 }
-@media screen and (max-width: 1024px) {
-  .container-meta {
-    flex-direction: column;
-    margin-top: 5%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .container-meta {
-    margin-top: 8%;
-    width: 100%;
+
+@media screen and (max-width: 880px) {
+  div.meta {
+    padding: 0.2rem 0.3rem !important;
+    margin: 2rem 0 !important;
   }
 }
 </style>

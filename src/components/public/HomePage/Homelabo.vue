@@ -79,8 +79,19 @@ div.labo:nth-child(4) {
 div.labo:nth-child(5) {
   grid-area: down;
 }
-@media screen and (max-width: 1024px) {
-}
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 880px) {
+  div.labo {
+    padding: 0.2rem 0.3rem !important;
+    margin: 0 !important;
+  }
+  div.labo:nth-child(2) {
+    grid-area: hd;
+  }
+  div.labo:nth-child(1) {
+    grid-area: elG;
+  }
+  div.labo:nth-child(3) {
+    grid-area: elD;
+  }
 }
 </style>

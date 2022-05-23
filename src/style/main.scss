@@ -69,6 +69,7 @@ nav {
     "btn btn btn btn"
     "down down down down";
 }
+
 .home-labo {
   height: 100%;
   padding: 1rem 3rem;
@@ -94,7 +95,40 @@ nav {
     "texte texte texte texte"
     "btn3 btn3 btn4 btn4 ";
 }
-
+@media screen and (max-width: 880px) {
+  .home-meta,
+  .home-labo {
+    padding: 1rem 0.3rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 20rem);
+    grid-template-areas:
+      "elG"
+      "hd"
+      "elD"
+      "btn"
+      "down";
+  }
+  .home-about {
+    padding: 1rem 0.3rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "btn4"
+      "btn2"
+      "texte"
+      "btn1"
+      "btn3";
+  }
+}
+@media screen and (max-width: 480px) {
+  .home-meta,
+  .home-labo {
+    grid-template-rows: repeat(5, 15rem);
+  }
+  .has-font-gabriola {
+    font-size: 3rem;
+  }
+}
 //***************************************Labo & formations***************Labo & formations*********************Labo & formations********************
 .grid-card {
   display: grid;
@@ -120,6 +154,29 @@ div.grid-card-child:nth-child(4) {
 }
 .selectedCard {
   min-width: 30rem;
+}
+@media screen and (max-width: 1100px) {
+  .grid-card {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10rem 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+      "title title "
+      "card1 card2 "
+      "card3 card3 ";
+  }
+}
+@media screen and (max-width: 780px) {
+  .grid-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+      "title  "
+      "card1  "
+      "card2  "
+      "card3  ";
+  }
 }
 //***************************************Qui somme nous ***************Qui somme nous *********************Qui somme nous ********************
 .grid-about {
