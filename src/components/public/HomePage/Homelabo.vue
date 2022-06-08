@@ -42,7 +42,10 @@ export default {
         {
           id: 0,
           name: "le Labo",
-          router: "/laboratoire",
+          router: {
+            name: "labo",
+            params: { view: "accueil" },
+          },
           width: "320px",
           strokeDasharray1: 140,
           strokeDasharray2: 540,

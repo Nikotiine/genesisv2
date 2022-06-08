@@ -2,7 +2,7 @@
   <section class="hero is-fullheight">
     <div class="home-meta">
       <div class="meta">
-        <h1 class="has-font-gabriola">MetaHomeopathie</h1>
+        <h1 class="has-font-gabriola">Genesis:MetaHomeopathie</h1>
       </div>
       <div class="meta">
         <figure class="image">
@@ -11,8 +11,11 @@
       </div>
       <div class="meta">
         <p class="has-text-secondary">
-          c'est la page d'acceuil de Genesis , le liens du dessous t envoie sur
-          la methode ainsi je vous explique la methode , suivez le guide ...
+          La pièce manquante entre l’Homéopathie Hahnemannienne et les science
+          quantiques modernes :
+          <span class="has-font-gabriola-sub has-text-secondary"
+            >La MetaHomeopathie</span
+          >
         </p>
       </div>
       <div class="meta">
@@ -41,7 +44,7 @@ export default {
       bouton: [
         {
           id: 0,
-          name: "La methode",
+          name: "Decouvrir",
           router: "/methode",
           width: "320px",
           strokeDasharray1: 140,
