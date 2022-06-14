@@ -49,17 +49,7 @@
                 }"
                 class="navbar-item"
                 @click="closeNav"
-                >Sauvegarde de la technique</router-link
-              >
-
-              <router-link
-                :to="{
-                  name: 'labo',
-                  params: { view: 'dilutions' },
-                }"
-                class="navbar-item"
-                @click="closeNav"
-                >Recherche et création de dilutions</router-link
+                >La technique</router-link
               >
 
               <router-link
@@ -189,6 +179,11 @@ export default {
     return {
       showNav: false,
     };
+  },
+  methods: {
+    closeNav() {
+      this.showNav = !this.showNav;
+    },
   },
 };
 </script>

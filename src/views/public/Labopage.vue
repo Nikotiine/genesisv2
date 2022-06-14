@@ -29,7 +29,7 @@
           </div>
         </div>
       </div>
-      <div
+      <!-- <div
         class="grid-card-child"
         :class="{ selectedCard: view === 'dilutions' }"
       >
@@ -53,7 +53,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div
         class="grid-card-child"
         :class="{ selectedCard: view === 'explications' }"
@@ -92,10 +92,10 @@
 <script>
 import buttonAnime from "@/components/inAllComponents/button.vue";
 import LaboTechnique from "@/components/public/LaboPage/Technique.vue";
-import LaboDilutions from "@/components/public/LaboPage/Dilutions.vue";
+
 import LaboExplications from "@/components/public/LaboPage/Explications.vue";
 export default {
-  components: { buttonAnime, LaboTechnique, LaboExplications, LaboDilutions },
+  components: { buttonAnime, LaboTechnique, LaboExplications },
   name: "LaboPage",
   props: ["view"],
   data() {
@@ -103,7 +103,7 @@ export default {
       card1: [
         {
           id: 0,
-          name: "La technique",
+          name: "Le laboratoire",
           router: {
             name: "labo",
             params: { view: "technique" },
@@ -115,25 +115,25 @@ export default {
           dashHover: 760,
         },
       ],
-      card2: [
-        {
-          id: 0,
-          name: "Les dilutions",
-          router: {
-            name: "labo",
-            params: { view: "dilutions" },
-          },
-          width: "320px",
-          strokeDasharray1: 140,
-          strokeDasharray2: 540,
-          strokeDashoffset: -474,
-          dashHover: 760,
-        },
-      ],
+      // card2: [
+      //   {
+      //     id: 0,
+      //     name: "Les dilutions",
+      //     router: {
+      //       name: "labo",
+      //       params: { view: "dilutions" },
+      //     },
+      //     width: "320px",
+      //     strokeDasharray1: 140,
+      //     strokeDasharray2: 540,
+      //     strokeDashoffset: -474,
+      //     dashHover: 760,
+      //   },
+      // ],
       card3: [
         {
           id: 0,
-          name: "Explications",
+          name: "L'association",
           router: {
             name: "labo",
             params: { view: "explications" },
@@ -150,4 +150,25 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.grid-card {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  grid-template-areas:
+    "title title"
+    "card1 card2";
+}
+@media screen and (max-width: 780px) {
+  .grid-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+      "title  "
+      "card1  "
+      "card2  ";
+  }
+}
+</style>
