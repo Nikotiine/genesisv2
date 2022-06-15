@@ -15,7 +15,7 @@
       <div class="meta-main">
         <p class="has-text-secondary">
           C’est la pièce manquante entre l’Homéopathie Hahnemannienne et les
-          science quantiques modernes. Elle emprunte à l’une sa méthode de
+          sciences quantiques modernes. Elle emprunte à l’une sa méthode de
           fabrication et à l’autre sa compréhension des différents champs qui
           nous entourent, influencent notre vie, notre santé et notre
           environnement.
@@ -68,7 +68,7 @@ export default {
   align-items: center;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.8fr 1fr 1fr 1fr;
   grid-template-areas:
     "title title title"
     "subt subt subt"
@@ -108,5 +108,35 @@ export default {
 .meta-main:nth-child(7) {
   grid-area: logo2;
   width: 320px;
+}
+@media screen and (max-width: 880px) {
+  .main-meta {
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1.5fr;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    grid-template-areas:
+      "title"
+      "subt"
+      "texte1"
+      "logo2"
+      "texte2"
+      "logo1"
+      "texte3";
+  }
+}
+@media screen and (max-width: 480px) {
+  .has-font-gabriola-sub {
+    font-size: 2rem;
+  }
+  .meta-main:nth-child(3) {
+    width: 80%;
+  }
+  .meta-main:nth-child(4) {
+    width: 80%;
+  }
+  .meta-main:nth-child(5) {
+    margin-top: 2rem;
+    width: 80%;
+  }
 }
 </style>

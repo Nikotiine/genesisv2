@@ -179,6 +179,18 @@ div.grid-card-child:nth-child(4) {
       "card2  "
       "card3  ";
   }
+  .selectedCard {
+    min-width: 20rem;
+  }
+  div.grid-card-child:nth-child(2) {
+    max-width: 350px;
+  }
+  div.grid-card-child:nth-child(3) {
+    max-width: 350px;
+  }
+  div.grid-card-child:nth-child(4) {
+    max-width: 350px;
+  }
 }
 //***************************************Qui somme nous ***************Qui somme nous *********************Qui somme nous ********************
 .grid-about {
